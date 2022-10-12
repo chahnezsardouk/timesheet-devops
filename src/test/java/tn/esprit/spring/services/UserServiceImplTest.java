@@ -29,26 +29,26 @@ class UserServiceImplTest {
 //		Assertions.assertEquals(0, listUsers.size());
 //	}
 
-	@Test
-	@Order(2)
-	public void testAddUser() throws ParseException   {
-		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-		Date d = dateFormat.parse("2015-03-23");
-		User u = new User("Mayssa1", "Mayssa1", d, Role.INGENIEUR); 
-		User userAdded = us.addUser(u); 
-		Assertions.assertEquals(u.getLastName(), userAdded.getLastName());
-	}
-
-	@Test
-	@Order(3)
-	public void testModifyUser() throws ParseException   {
-		
-		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-		Date d = dateFormat.parse("2015-03-23");
-		User u = new User(1L, "Mayssa122222222", "Mayssa", d, Role.INGENIEUR); 
-		User userUpdated  = us.updateUser(u); 
-		Assertions.assertEquals(u.getLastName(), userUpdated.getLastName());
-	}
+//	@Test
+//	@Order(2)
+//	public void testAddUser() throws ParseException   {
+//		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+//		Date d = dateFormat.parse("2015-03-23");
+//		User u = new User("Mayssa1", "Mayssa1", d, Role.INGENIEUR); 
+//		User userAdded = us.addUser(u); 
+//		Assertions.assertEquals(u.getLastName(), userAdded.getLastName());
+//	}
+//
+//	@Test
+//	@Order(3)
+//	public void testModifyUser() throws ParseException   {
+//		
+//		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+//		Date d = dateFormat.parse("2015-03-23");
+//		User u = new User(1L, "Mayssa122222222", "Mayssa", d, Role.INGENIEUR); 
+//		User userUpdated  = us.updateUser(u); 
+//		Assertions.assertEquals(u.getLastName(), userUpdated.getLastName());
+//	}
 //
 //	@Test
 //	@Order(4)
@@ -56,12 +56,12 @@ class UserServiceImplTest {
 //		User userRetrieved = us.retrieveUser("1"); 
 //		Assertions.assertEquals(1L, userRetrieved.getId());
 //	}
-	
-	@Test
-	@Order(5)
-	public void testDeleteUser() {
-		us.deleteUser("1");
-		Assertions.assertNull(us.retrieveUser("1"));
-	} 
+//	
+//	@Test
+//	@Order(5)
+//	public void testDeleteUser() {
+//		us.deleteUser("1");
+//		Assertions.assertNull(us.retrieveUser("1"));
+//	} 
 	     	
 }
