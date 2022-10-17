@@ -39,18 +39,20 @@ class UserServiceImplMock {
 
 	User user = new User("f1", "l1", new Date(), Role.ADMINISTRATEUR);
 
-	List<User> listUsers = new ArrayList<User>() {
-		{
-			add(new User("f2", "l2", new Date(), Role.ADMINISTRATEUR));
-			add(new User("f3", "l3", new Date(), Role.ADMINISTRATEUR));
-		}
-	};
+//	List<User> listUsers = new ArrayList<User>() {
+//		{
+//			add(new User("f2", "l2", new Date(), Role.ADMINISTRATEUR));
+//			add(new User("f3", "l3", new Date(), Role.ADMINISTRATEUR));
+//		}
+//	};
 
 
 	@Test
 	public void testRetrieveUser() {
+		System.out.println(user);
 		Mockito.when(userRepository.findById(Mockito.anyLong())).thenReturn(Optional.of(user));
 		User user1 = userService.retrieveUser("2");
+		System.out.print(user1);
 		Assertions.assertNotNull(user1);
 	}
 
