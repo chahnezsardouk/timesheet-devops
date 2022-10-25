@@ -15,8 +15,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-@SpringBootTest
-@TestMethodOrder(OrderAnnotation.class)
+//@SpringBootTest
+//@TestMethodOrder(OrderAnnotation.class)
 class UserServiceImplTest { 
 	
 	@Autowired
